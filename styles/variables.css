@@ -1,0 +1,43 @@
+/*
+  Переменные для вашего проекта
+  и их переопределение под различные устройства
+*/
+
+/* переменные для текста */
+:root {
+  --main-font: IBM Plex Mono;
+  --main-font-size: 18px;
+  --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --bold-text-weight: 700;
+  --thin-text-weight: 400;
+}
+
+/* переменные для цветов */
+:root {
+  --bg-color: #fff1f7;
+  --bg-pic: url(../images/cover-image-light.png);
+  --accent-color: #ff8dcb;
+  --main-text-color: #000;
+  --title-text-color: #ffc2e6;
+  --button-hover: rgb(0, 0, 0, 0.4);
+  --button-focus: #353430;
+  --button-text: #000;
+  --decor-zone-color: #000;
+  --title-decor-text: #000;
+  --main-title: #000;
+}
+
+/* переменные для отступов */
+:root {
+  --side-padding: 10px;
+  --min-ind: 10px;
+  --mid-ind: 20px;
+  --max-ind: 50px;
+}
+
+@media (width >= 768px) {
+  :root {
+    --side-padding: 20px;
+    --max-ind: 80px;
+  }
+}

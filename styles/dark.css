@@ -1,0 +1,51 @@
+/*
+  Специально для тёмной темы при наличии класса,
+  здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+:root.theme-dark {
+  --bg-color: #000028;
+  --bg-pic: url(../images/cover-image-dark.png);
+  --accent-color: #ff0070;
+  --main-text-color: #f1b2ce;
+  --title-text-color: #db00ff;
+  --button-hover: rgb(255, 0, 112, 0.4);
+  --button-focus: rgb(255, 0, 112, 1);
+  --button-text: #ff0070;
+  --decor-zone-color: #ff0070;
+  --title-decor-text: #000028;
+  --main-title: #ff0070;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #000028;
+    --bg-pic: url(../images/cover-image-dark.png);
+    --accent-color: #ff0070;
+    --main-text-color: #f1b2ce;
+    --title-text-color: #db00ff;
+    --button-hover: rgb(255, 0, 112, 0.4);
+    --button-focus: rgb(255, 0, 112, 1);
+    --button-text: #ff0070;
+    --decor-zone-color: #ff0070;
+    --title-decor-text: #000028;
+    --main-title: #ff0070;
+  }
+
+  .rec {
+    display: block;
+  }
+
+  .lamp {
+    display: block;
+  }
+}
+
+.theme-dark .rec {
+  display: block;
+}
+
+.theme-dark .lamp {
+  display: block;
+}

@@ -1,0 +1,310 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+.page {
+  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  color: var(--main-text-color);
+  font-family: var(--main-font), sans-serif;
+  font-size: var(--main-font-size);
+  font-weight: var(--thin-text-weight);
+  line-height: 23.4px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  background-color: var(--bg-color);
+  background-image: var(--bg-pic);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  inline-size: 100vi;
+}
+
+.bold_text {
+  font-weight: var(--bold-text-weight);
+}
+
+.header {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-items: end;
+  align-items: center;
+  margin-block-end: 40px;
+  padding-inline: var(--side-padding);
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: " ";
+  border-block-start: 1px solid var(--decor-zone-color);
+  border-inline-end: 1px solid var(--decor-zone-color);
+  position: absolute;
+  block-size: 25px;
+  inline-size: 25px;
+  top: var(--side-padding);
+  right: var(--side-padding);
+}
+
+.decorated-zone::after {
+  content: " ";
+  border-block-end: 1px solid var(--decor-zone-color);
+  border-inline-start: 1px solid var(--decor-zone-color);
+  position: absolute;
+  block-size: 25px;
+  inline-size: 25px;
+  bottom: var(--side-padding);
+  left: var(--side-padding);
+}
+
+.rec {
+  position: absolute;
+  top: var(--side-padding);
+  right: calc(var(--side-padding) + 18px + var(--min-ind));
+  color: var(--accent-color);
+  text-transform: uppercase;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+.lamp {
+  content: "";
+  inline-size: calc(var(--main-font-size) / 2);
+  block-size: calc(var(--main-font-size) / 2);
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  position: absolute;
+  top: calc(var(--side-padding) + var(--main-font-size) / 2);
+  right: calc(var(--side-padding) + 18px - var(--min-ind));
+}
+
+.header__theme-menu {
+  display: flex;
+  grid-row: 1 / auto;
+  padding: 0;
+  justify-self: end;
+  align-self: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: var(--min-ind);
+  flex-direction: column;
+}
+
+.header__theme-menu-button {
+  padding: 1.5px 13px;
+  font-size: inherit;
+  font-family: inherit;
+  color: var(--button-text);
+  line-height: 18px;
+  font-weight: inherit;
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--button-text);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-hover);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--button-focus);
+}
+
+.header__title {
+  grid-row: 2 / auto;
+  font-size: var(--title-font-size);
+  line-height: 95.7px;
+  color: var(--title-text-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  justify-self: start;
+}
+
+.header__text-box {
+  grid-row: 3 / auto;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--title-decor-text);
+}
+
+.main {
+  padding-inline: var(--side-padding);
+  display: flex;
+  gap: var(--max-ind);
+  flex-direction: column;
+}
+
+.main__title {
+  color: var(--main-title);
+}
+
+.why,
+.what,
+.how {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  gap: var(--mid-ind);
+}
+
+.why .main__subtitle,
+.what .main__subtitle,
+.how .main__subsubtitle {
+  margin-block-end: var(--min-ind);
+}
+
+.how .main__subtitle {
+  margin-block-end: var(--mid-ind);
+}
+
+.why .main__text:not(:last-of-type),
+.what .what-block:not(:last-of-type),
+.how .main__text:not(:last-of-type) {
+  margin-block-end: var(--mid-ind);
+}
+
+.main__link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+.main__link:hover {
+  text-decoration: underline;
+}
+
+.main__link:focus {
+  outline: 1px solid var(--main-text-color);
+}
+
+.gallery {
+  inline-size: 100%;
+  display: grid;
+  grid-template-rows: repeat(6, min-content);
+  gap: var(--min-ind);
+}
+
+.picture {
+  inline-size: 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.footer__title {
+  font-size: var(--title-font-size);
+  line-height: 95.7px;
+  color: var(--title-text-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+@media (width >= 768px) {
+  .header {
+    padding-inline-start: 0;
+    padding-inline-end: var(--side-padding);
+  }
+
+  .header__text-box {
+    inline-size: 50%;
+  }
+
+  .why,
+  .how {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .what {
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: min-content 1fr;
+  }
+
+  .what .main__title {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  .what-text {
+    grid-row: 2/3;
+    grid-column: 1/3;
+  }
+
+  .gallery {
+    grid-template-rows: repeat(4, min-content);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--mid-ind);
+  }
+
+  .gallery .main__title {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+  }
+
+  .sunset {
+    grid-row: 2/3;
+    grid-column: 1/3;
+  }
+
+  .ice-cream {
+    grid-row: 2/4;
+    grid-column: 3/4;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .tape {
+    grid-row: 3/5;
+    grid-column: 1/2;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .books {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+
+  .street {
+    grid-row: 4/5;
+    grid-column: 2/4;
+  }
+}
+
+@media (width >= 1024px) {
+  .header {
+    padding-block-start: var(--side-padding);
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    gap: var(--min-ind);
+    flex-direction: row;
+  }
+
+  .what {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .what-text {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--mid-ind);
+  }
+}

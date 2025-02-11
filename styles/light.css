@@ -1,0 +1,41 @@
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+:root.theme-light {
+  /* сохраните этот селектор в приведённом виде.
+    Так стили написанные ниже будут иметь больший вес,
+    чем стили в медиазапросе предпочтений пользователя
+  */
+  --bg-color: #fff1f7;
+  --bg-pic: url(../images/cover-image-light.png);
+  --accent-color: #ff8dcb;
+  --main-text-color: #000;
+  --title-text-color: #ffc2e6;
+  --button-hover: rgb(0, 0, 0, 0.4);
+  --button-focus: #353430;
+  --button-text: #000;
+  --decor-zone-color: #000;
+  --title-decor-text: #000;
+  --main-title: #000;
+}
+
+.rec {
+  display: none;
+}
+
+.lamp {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  .theme-light .rec {
+    display: none;
+  }
+
+  .theme-light .lamp {
+    display: none;
+  }
+}
