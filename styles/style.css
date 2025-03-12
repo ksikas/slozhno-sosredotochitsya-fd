@@ -31,7 +31,7 @@
   grid-template-rows: 1fr min-content 1fr;
   justify-items: end;
   align-items: center;
-  margin-block-end: 40px;
+  margin-block-end: var(--header-ind);
   padding-inline: var(--side-padding);
   position: relative;
 }
@@ -92,7 +92,7 @@
 
 .header__theme-menu-list {
   display: flex;
-  gap: var(--min-ind);
+  gap: calc(var(--min-ind)+1.5px);
   flex-direction: column;
 }
 
@@ -211,6 +211,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-block-start: var(--footer-ind);
 }
 
 .footer__title {

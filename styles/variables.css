@@ -27,11 +27,15 @@
   --min-ind: 10px;
   --mid-ind: 20px;
   --max-ind: 50px;
+  --footer-ind: 40px;
+  --header-ind: 40px;
 }
 
 @media (width >= 768px) {
   :root {
     --side-padding: 20px;
     --max-ind: 80px;
+    --footer-ind: 60px;
+    --header-ind: 60px;
   }
 }
