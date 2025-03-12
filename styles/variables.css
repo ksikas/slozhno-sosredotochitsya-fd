@@ -5,7 +5,7 @@
 
 :root {
   /* переменные для текста */
-  --main-font: IBM Plex Mono;
+  --main-font: 'IBM Plex Mono';
   --main-font-size: 18px;
   --title-font-size: clamp(7.25rem, calc(7.0115rem + 1.0178vw), 7.5rem);
   --bold-text-weight: 700;
