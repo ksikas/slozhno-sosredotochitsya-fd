@@ -40,6 +40,10 @@
   .lamp {
     display: block;
   }
+
+  .gallery .main__title {
+    color: var(--title-decor-text)
+  }
 }
 
 .theme-dark .rec {
@@ -48,4 +52,9 @@
 
 .theme-dark .lamp {
   display: block;
+
+}
+
+.theme-dark .gallery .main__title {
+  color: var(--title-decor-text)
 }
