@@ -224,11 +224,11 @@
     min-height: 1024px;
     padding-inline-start: 0;
     padding-inline-end: var(--side-padding);
-    padding-block-end: 183px;
   }
 
   .header__title {
     font-size: var(--title-font-size-desktop);
+    margin-block-end: 162px;
   }
 
   .header__text-box {
@@ -307,7 +307,10 @@
   .header {
     min-height: 768px;
     padding-block-start: var(--side-padding);
-    padding-block-end: 134px;
+  }
+
+  .header__title {
+    margin-block-end: 114px;
   }
 
   .header__theme-menu {
