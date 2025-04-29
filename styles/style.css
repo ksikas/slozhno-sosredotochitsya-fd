@@ -239,7 +239,6 @@
 
   .header__title {
     font-size: var(--title-font-size-desktop);
-    margin-block-end: 162px;
   }
 
   .header__text-box {
