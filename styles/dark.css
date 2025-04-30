@@ -32,28 +32,4 @@
     --title-decor-text: #000028;
     --main-title: #ff0070;
   }
-
-  .rec {
-    display: block;
-  }
-
-  .lamp {
-    display: block;
-  }
-
-  .gallery .main__title {
-    color: var(--title-decor-text);
-  }
-}
-
-.theme-dark .rec {
-  display: block;
-}
-
-.theme-dark .lamp {
-  display: block;
-}
-
-.theme-dark .gallery .main__title {
-  color: var(--title-decor-text);
 }
